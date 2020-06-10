@@ -4,12 +4,11 @@ import ReactDOM from "react-dom";
 let date = new Date();
 let year = date.getFullYear();
 
-function Note() {
+function Footer() {
 return (
-    <div className="note">
-    <h1>Title</h1>
-<p> Content </p>
-    </div>
+    <footer>
+<p className="footer"> Copyright © {year} </p>
+    </footer>
 
 )
 }

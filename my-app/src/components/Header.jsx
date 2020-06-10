@@ -3,9 +3,7 @@ import ReactDOM from "react-dom";
 
 function Header() {
 return (
-<nav className="header">
-    <a href="#title">Keeper App</a>
-</nav>
+<header><h1>Keeper</h1></header>
 )
 }
 
