@@ -9,9 +9,9 @@ function CreateArea(props) {
     function changeHandler(event) {
         const {value, name} = event.target;
 
-        setNote(prevValue => {
+        setNote(prevNote => {
             return{
-                ...prevValue,
+                ...prevNote,
                 [name]: value
             }
         });
