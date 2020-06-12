@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./note";
 import CreateArea from "./CreateArea";
-import notes from "../notes";
+
 
 
 function App() {
