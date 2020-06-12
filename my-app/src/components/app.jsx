@@ -3,51 +3,47 @@ import ReactDOM from "react-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./note";
-import InputArea from "./InputArea";
+import CreateArea from "./CreateArea";
+import notes from "../notes";
+
 
 function App() {
-  const [items, setItems] = useState([]);
 
-  function addItem(inputText) {
-    setItems(prevItems => {
-      return [...prevItems, inputText];
-    });
-  }
+    const [items, setItems] = useState([])
 
-  function deleteItem(id) {
-    setItems(prevItems => {
-      return prevItems.filter((item, index) => {
-        return index !== id;
-      });
-    });
-  }
+    function addItem() {
+        return (
 
-  return (
-    <div className="container">
-      <div className="heading">
-        <h1>To-Do List</h1>
-      </div>
-      <InputArea onAdd={addItem} />
-      <div>
-      <Header />
-        <ul>
-          {items.map((todoItem, index) => (
-            <Note
-              key={index}
-              id={index}
-              text={todoItem}
-              onChecked={deleteItem}
-              title={note.title}
-                content={note.content}
-            />
-          ))}
-        </ul>
+        )
+    }
+
+    function deleteItem(id){
+        setItems(prevItems => {
+            return prevItems.filter((item, index) => {
+                return index !== id;
+            });
+        });
+    }
+
+return (
+    <div>
+        <Header />
+        <CreateArea
+        onAdd={addItem}
+        />
+        {items.map((item, index) =>
+        <Note
+        key={index}
+        id={index}
+        title={note.heading}
+        content={note.body}
+        onChecked={deleteItem}
+        />
+        )}
         <Footer />
-      </div>
     </div>
-  );
+)
 }
-
 
 export default App;
 
