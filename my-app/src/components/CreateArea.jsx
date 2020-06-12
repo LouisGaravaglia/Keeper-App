@@ -42,11 +42,7 @@ function CreateArea(props) {
             placeholder="Take a note..." 
             rows="3" 
             />
-            <button 
-            onClick={() => {
-                props.onAdd(note); 
-            }}
-            >Add</button>
+            <button onClick={submitNote}>Add</button>
         </form>
         </div>
     );
