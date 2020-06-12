@@ -17,10 +17,12 @@ function App() {
         )
     }
 
-    function deleteItem(){
-        return (
-
-        )
+    function deleteItem(id){
+        setItems(prevItems => {
+            return prevItems.filter((item, index) => {
+                return index !== id;
+            });
+        });
     }
 
 return (
@@ -31,10 +33,11 @@ return (
         />
         {items.map((item, index) =>
         <Note
-        key-{index}
+        key={index}
         id={index}
         title={note.heading}
         content={note.body}
+        onChecked={deleteItem}
         />
         )}
         <Footer />
