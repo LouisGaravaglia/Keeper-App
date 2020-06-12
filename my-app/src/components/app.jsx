@@ -37,8 +37,8 @@ return (
         <Note
         key={index}
         id={index}
-        title={noteItem.heading}
-        content={noteItem.body}
+        title={noteItem.title}
+        content={noteItem.content}
         onChecked={deleteItem}
         />
         );
