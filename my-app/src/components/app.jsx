@@ -12,9 +12,10 @@ function App() {
     const [items, setItems] = useState([])
 
     function addItem() {
-        return (
-
-        )
+      setItems(prevItems => {
+          return [...prevItems, item];
+      });
+      setItems("");
     }
 
     function deleteItem(id){
