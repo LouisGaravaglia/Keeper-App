@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+
 function CreateArea(props) {
     const [notes, setNotes] = useState({
         title: "",
@@ -44,7 +45,7 @@ function CreateArea(props) {
             rows="3" 
             value={notes.content}
             />
-            <button onClick={submitNote}>Add</button>
+            <button onClick={submitNote}>add</button>
         </form>
         </div>
     );
